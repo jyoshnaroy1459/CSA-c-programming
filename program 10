@@ -1,0 +1,30 @@
+#include <iostream>
+
+int main() {
+    
+    int num1, num2;
+
+    
+    std::cout << "Enter the first number: ";
+    std::cin >> num1;
+
+   
+    std::cout << "Enter the second number: ";
+    std::cin >> num2;
+
+    
+    std::cout << "Before swapping: " << std::endl;
+    std::cout << "num1 = " << num1 << std::endl;
+    std::cout << "num2 = " << num2 << std::endl;
+
+    num1 = num1 ^ num2; // Step 1: num1 now holds num1 ^ num2
+    num2 = num1 ^ num2; // Step 2: num2 now holds num1 (original value of num1)
+    num1 = num1 ^ num2; // Step 3: num1 now holds num2 (original value of num2)
+
+    
+    std::cout << "After swapping: " << std::endl;
+    std::cout << "num1 = " << num1 << std::endl;
+    std::cout << "num2 = " << num2 << std::endl;
+
+    return 0;
+}
