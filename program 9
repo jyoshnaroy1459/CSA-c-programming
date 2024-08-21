@@ -1,0 +1,30 @@
+#include <iostream>
+#include <cmath> 
+
+int main() {
+
+    float number;
+    
+   
+    std::cout << "Enter a floating-point number: ";
+    std::cin >> number;
+
+   
+    int roundedDown = std::floor(number); // Round down to the nearest integer
+    int roundedUp = std::ceil(number);    // Round up to the nearest integer
+    
+    
+    int nearestInteger;
+    if (std::abs(number - roundedDown) < std::abs(number - roundedUp)) {
+        nearestInteger = roundedDown;
+    } else {
+        nearestInteger = roundedUp;
+    }
+
+
+    std::cout << "Rounded down: " << roundedDown << std::endl;
+    std::cout << "Rounded up: " << roundedUp << std::endl;
+    std::cout << "Nearest integer: " << nearestInteger << std::endl;
+
+    return 0;
+}
